@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Creating custom theme  -->
+    <style name="MyTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/green</item>
+        <item name="colorOnPrimary">#2196F3</item>
+
+        <item name="android:windowFullscreen">true</item>
+
+        <!-- To change color of bottom navigation bar -->
+        <item name="android:navigationBarColor">@color/red</item>
+    </style>
+
+    <!-- Creating custom style for views -->
+    <style name="TextView">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/teal_200</item>
+    </style>
+
+
+    <style name="styleForButton">
+        <item name="android:backgroundTint">#ff5566</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+</resources>

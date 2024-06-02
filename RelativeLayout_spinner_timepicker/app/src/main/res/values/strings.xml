@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RelativeLayout</string>
+
+    <string-array name="Department">
+        <item>Select your department</item>
+        <item>Android Team</item>
+        <item>IOS Team</item>
+        <item>Testing Team</item>
+        <item>Hr Team</item>
+
+    </string-array>
+</resources>

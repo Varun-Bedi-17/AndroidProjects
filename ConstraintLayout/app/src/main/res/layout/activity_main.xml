@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student form"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:background="@color/teal_200"
+        android:padding="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please fill your details !"
+        android:textColor="#ff0000"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/title2"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"/>
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/name" />
+
+    <TextView
+        android:id="@+id/roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll No."
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/input_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your roll no"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/roll"
+        app:layout_constraintLeft_toLeftOf="@id/input_name"
+        app:layout_constraintRight_toRightOf="@id/input_name"
+        app:layout_constraintBottom_toBottomOf="@id/roll"/>
+
+    <TextView
+        android:id="@+id/Class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/roll"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/input_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your class"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/Class"
+        app:layout_constraintLeft_toLeftOf="@id/input_name"
+        app:layout_constraintRight_toRightOf="@id/input_name"
+        app:layout_constraintBottom_toBottomOf="@id/Class"/>
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/Class"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/input_age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter your age"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="@id/age"
+        app:layout_constraintLeft_toLeftOf="@id/input_name"
+        app:layout_constraintRight_toRightOf="@id/input_name"
+        app:layout_constraintBottom_toBottomOf="@id/age"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/age"
+        android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

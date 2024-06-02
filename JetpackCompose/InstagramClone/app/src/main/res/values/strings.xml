@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">InstagramClone</string>
+    <string name="sign_in_failed">Sign In Failed</string>
+    <string name="new_user_sign_up">Or New User? | Sign Up</string>
+    <string name="sign">Sign</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="enter_mail">Enter your mail</string>
+    <string name="enter_pass">Enter your password</string>
+    <string name="enter_username">Enter your Username</string>
+    <string name="already_user">Already a User ? | Sign In</string>
+    <string name="sign_up_failed">Sign Up Failed</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="insta">Instagram</string>
+    <string name="add_icon">Add Icon</string>
+    <string name="user_profile_image">Profile image of user</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="wite_something">Write something about yourself...</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="share_profile">Share Profile</string>
+</resources>

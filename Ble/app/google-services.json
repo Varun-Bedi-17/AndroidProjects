@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1043776605060",
+    "project_id": "bluetoothle-85c6c",
+    "storage_bucket": "bluetoothle-85c6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043776605060:android:08c331fc766115934cabd1",
+        "android_client_info": {
+          "package_name": "com.example.ble"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043776605060-68bg7m54gt062e2aj1k5jasb8bpkrc79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ble",
+            "certificate_hash": "b998d42e3cff9c022a7b7a20a099188f4e2c9ce1"
+          }
+        },
+        {
+          "client_id": "1043776605060-e42e431bko3f1re850clkq1l255541jc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO8MoxQXepEl4l5sWM7jPhszsUW3RoFoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043776605060-e42e431bko3f1re850clkq1l255541jc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

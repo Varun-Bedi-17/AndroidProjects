@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OutlinedTextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+         <!-- Adjust the bottom padding as needed -->
+        <item name="boxStrokeWidth">2dp</item> <!-- Adjust the outline stroke width as needed -->
+        <item name="android:hint">Label</item> <!-- Replace with your desired label -->
+        <item name="hintEnabled">true</item>
+        <item name="hintTextAppearance">@style/OutlinedTextField.HintText</item>
+    </style>
+
+    <style name="OutlinedTextField.HintText" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item> <!-- Adjust the text size as needed -->
+        <item name="android:textColor">#AFAFAF</item> <!-- Adjust the text color as needed -->
+    </style>
+</resources>

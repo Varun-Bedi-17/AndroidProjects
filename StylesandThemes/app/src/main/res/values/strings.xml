@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Styles and Themes</string>
+    <string name="button_name">Button</string>
+    <string name="view_button">Hello World!</string>
+</resources>

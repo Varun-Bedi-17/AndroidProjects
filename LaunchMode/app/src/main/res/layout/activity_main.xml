@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#CDFB97">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On Activity A "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Button
+        android:id="@+id/aA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Launch Activity A"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <Button
+        android:id="@+id/aB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/aA"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/aA"
+        android:text="Launch Activity B"
+        app:layout_constraintTop_toBottomOf="@+id/aA"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <Button
+        android:id="@+id/aC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/aB"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/aB"
+        android:text="Launch Activity C"
+        app:layout_constraintTop_toBottomOf="@+id/aB"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <Button
+        android:id="@+id/aD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/aC"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:text="Launch Activity D"
+        app:layout_constraintStart_toStartOf="@+id/aC"
+        app:layout_constraintTop_toBottomOf="@+id/aC" />
+</androidx.constraintlayout.widget.ConstraintLayout>
