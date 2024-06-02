@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="jobModel"
+            type="com.example.goodspacesample.domain.models.JobsModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_bg"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_job_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_job_name">
+
+            <TextView
+                android:id="@+id/tv_job_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{jobModel.jobTitle, default = @string/android_developer}"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/iv_search"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:contentDescription="@string/share_button"
+                android:src="@drawable/ic_share"
+                app:layout_constraintBottom_toBottomOf="@id/tv_job_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_job_name"
+                app:layout_constraintTop_toTopOf="@id/tv_job_name" />
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{jobModel.companyName ,default = @string/ai_career_counsellor}"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_job_name" />
+
+            <ImageView
+                android:id="@+id/iv_work_location"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_workspace"
+                android:contentDescription="@string/work_location_icon"
+                app:layout_constraintTop_toTopOf="@id/tv_work_location"
+                app:layout_constraintBottom_toBottomOf="@id/tv_work_location"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_work_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:text="@{jobModel.jobLocation, default = @string/ai_career_counsellor}"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_work_location"
+                app:layout_constraintTop_toBottomOf="@id/tv_company_name" />
+
+            <include
+                android:id="@+id/include_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                layout="@layout/layout_job_specifications_view"
+                app:layout_constraintTop_toBottomOf="@id/tv_work_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:annualCompensation = "@{jobModel.displayYearlyCompensation}"
+                app:requiredExp = "@{@string/required_exp(jobModel.expLowerWork, jobModel.expUpperWork)}"
+                app:locationType = "@{jobModel.jobType}"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/black"
+                app:layout_constraintTop_toTopOf="@id/tv_job_poster_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_job_poster_name">
+
+                <ImageView
+                    android:id="@+id/iv_job_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/profile_image"
+                    android:src="@drawable/avatar"
+                    android:scaleType="fitCenter"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/tv_job_poster_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="5dp"
+                android:text="@{jobModel.jobPosterName, default = @string/kamini}"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/cv_image"
+                app:layout_constraintTop_toBottomOf="@id/include_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_apply"
+                />
+
+            <Button
+                android:id="@+id/btn_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_blue"
+                android:text="@string/apply"
+                android:textAllCaps="false"
+                app:layout_constraintTop_toTopOf="@id/tv_job_poster_name"
+                app:layout_constraintBottom_toBottomOf="@id/tv_job_poster_name"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

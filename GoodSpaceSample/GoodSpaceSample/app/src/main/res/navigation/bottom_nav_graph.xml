@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/workFragment">
+
+    <fragment
+        android:id="@+id/workFragment"
+        android:name="com.example.goodspacesample.presentation.views.work_screen.WorkFragment"
+        android:label="@string/work"
+        tools:layout="@layout/fragment_work" />
+
+    <fragment
+        android:id="@+id/recruitFragment"
+        android:name="com.example.goodspacesample.presentation.views.recruit_screen.RecruitFragment"
+        android:label="@string/recruit"
+        tools:layout="@layout/fragment_recruit" />
+
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.example.goodspacesample.presentation.views.message_screen.MessageFragment"
+        android:label="@string/message"
+        tools:layout="@layout/fragment_message" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.goodspacesample.presentation.views.profile_screen.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+</navigation>

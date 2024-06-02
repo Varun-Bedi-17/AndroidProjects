@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Rounded Corner Style -->
+    <style name="RoundedCorner" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">80dp</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name = "android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+
+
+</resources>

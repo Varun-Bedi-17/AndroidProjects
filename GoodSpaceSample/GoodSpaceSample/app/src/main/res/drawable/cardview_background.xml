@@ -1,0 +1,22 @@
+<!-- res/drawable/bordered_card_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background color (adjust as needed) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <!-- Border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="5dp" />
+            <stroke
+                android:width="2dp"
+            android:color="@color/light_blue" />
+        </shape>
+    </item>
+
+</layer-list>
