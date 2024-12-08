@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PhotoPickerDemo</string>
+    <string name="select_media">Select Media</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="select_video">Select Video</string>
+    <string name="done">Done</string>
+    <string name="manage">Manage</string>
+</resources>

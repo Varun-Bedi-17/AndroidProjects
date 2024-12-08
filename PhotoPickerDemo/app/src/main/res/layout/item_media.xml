@@ -1,0 +1,46 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="mediaItem"
+            type="com.example.photopickerdemo.MediaItem" />
+
+        <variable
+            name="isSelected"
+            type="Boolean" />
+        <import type="android.view.View"/>
+        <import type="com.example.photopickerdemo.MediaType"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="4dp">
+
+        <!-- Media Thumbnail -->
+        <ImageView
+            android:id="@+id/mediaThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:loadThumbnail="@{mediaItem.uri}" />
+
+        <!-- Play icon for video -->
+        <ImageView
+            android:id="@+id/playIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_play_circle"
+            android:visibility="@{mediaItem.type == MediaType.VIDEO ? View.VISIBLE : View.GONE}" />
+
+        <!-- Selection Overlay -->
+        <View
+            android:id="@+id/selectedOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/selected_overlay"
+            android:visibility="@{isSelected ? View.VISIBLE : View.GONE}" />
+    </FrameLayout>
+</layout>
