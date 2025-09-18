@@ -1,8 +1,12 @@
 package com.example.kotlinflows
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
+import androidx.lifecycle.lifecycleScope
+import com.example.kotlinflows.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.Channel
@@ -18,11 +22,13 @@ const val CONSUMER3 = "Consumer3"
 const val CONSUMER4 = "Consumer4"
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private val viewModel by viewModels<MainActivityViewModel>()
     private val channel = Channel<Int>() // Create a Channel for sending and receiving integers.
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
         // Uncomment one of the following sections to demonstrate either Channels or Flows.
 
@@ -33,8 +39,43 @@ class MainActivity : AppCompatActivity() {
         // Flows
         // consumerFlow()
         // consumerSharedFlow()
-        consumerStateFlow()
+        // consumerStateFlow()
 
+        // LiveData
+        binding.btnLivedata.setOnClickListener{
+            viewModel.changeLiveData("LiveData Changed")
+        }
+
+        viewModel.livedata.observe(this) {
+            println("Livedata observer $it")
+            binding.tvLivedata.text = it
+        }
+
+        // SingleLiveEvent
+        binding.btnSingleliveevent.setOnClickListener{
+            viewModel.changeSingleLiveEvent("SingleLiveEvent Changed")
+
+        }
+        viewModel.getSingleLiveEvent().observe(this) {
+            println("SingleLiveEvent observer $it")
+            binding.tvSingleliveevent.text = it
+        }
+        viewModel.getSingleLiveEvent().observe(this) {
+            // only one observe can observe
+            println("SingleLiveEvent observer 2 $it")
+            binding.tvSingleliveevent.text = it
+        }
+
+
+        binding.button.setOnClickListener {
+            startActivity(Intent(this, MainActivity2::class.java))
+            lifecycleScope.launch {
+                delay(2000)
+                viewModel.changeSingleLiveEvent("SingleLiveEvent Changed 2")
+            }
+        }
+
+        setContentView(binding.root)
     }
 
     // Demonstrates sending data to a Channel.
@@ -206,5 +247,9 @@ class MainActivity : AppCompatActivity() {
                 Log.i(CONSUMER1, "$it")
             }
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
     }
 }

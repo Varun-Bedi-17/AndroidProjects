@@ -27,11 +27,11 @@ class MediaAdapter(
     override fun onBindViewHolder(holder: MediaViewHolder, position: Int) {
         val mediaItem = getItem(position)
         holder.bind(mediaItem, selectedUris.contains(mediaItem.uri)) { selected ->
-            handleSelection(mediaItem.uri, selected)
+            handleSelection(mediaItem.uri, selected, position)
         }
     }
 
-    private fun handleSelection(uri: Uri, selected: Boolean) {
+    private fun handleSelection(uri: Uri, selected: Boolean, position: Int) {
         if (selected) {
             if (!allowMultipleSelection) selectedUris.clear()
             selectedUris.add(uri)
@@ -39,7 +39,7 @@ class MediaAdapter(
             selectedUris.remove(uri)
         }
         onSelectionChanged(selectedUris.toList())
-        notifyDataSetChanged()
+        notifyItemChanged(position)
     }
 
     class MediaViewHolder(private val binding: ItemMediaBinding) :

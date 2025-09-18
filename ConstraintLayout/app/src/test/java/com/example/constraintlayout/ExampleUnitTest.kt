@@ -1,4 +1,4 @@
-package com.example.sampleappapplicationandintent
+package com.example.constraintlayout
 
 import org.junit.Test
 
